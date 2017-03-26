@@ -1,7 +1,7 @@
 from selenium import webdriver
 import time
 
-PROXY = "122.128.109.149:80"        #Funziona solo per le richieste http e non per quelle https
+PROXY = "122.128.109.149:80"  # Funziona solo per le richieste http e non per quelle https
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--proxy-server=http://%s' % PROXY)
@@ -14,3 +14,4 @@ while i < n:
     print('Richiesta eseguita')
     i += 1
     time.sleep(20)
+chrome.close()
